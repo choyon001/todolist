@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}home{% endblock title %}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #3498db;
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    {% block content %}
+    <h1>Todo List</h1>
+    <hr>
+    <h2><a href="{% url "register" %}">Register</a></h2>
+    <h2><a href="{% url "login" %}">Login</a></h2>
+    <h2><a href="{% url "view" %}">VIEW THE LIST</a></h2>
+    <h2><a href="{% url "add" %}">ADD INTO LIST</a></h2>
+    {% endblock content %}
+</body>
+</html>

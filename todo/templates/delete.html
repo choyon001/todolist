@@ -1,0 +1,6 @@
+<h2>Are you sure to delete "{{item.Item_name}}" ?</h2>
+<form action="{% url 'delete' item.id %}" method="POST">
+    {% csrf_token %}
+    <h3><a href="{% url 'view' %}">GO Back </a></h3>
+    <input type="submit" value="YES">
+</form>

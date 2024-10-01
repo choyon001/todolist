@@ -1,0 +1,7 @@
+<h1>Add Items to your list</h1>
+<br>
+<form method="POST" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add</button>
+</form>
